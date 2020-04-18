@@ -1,0 +1,68 @@
+/* Common */
+
+.row {
+	display: flex;
+}
+
+.wrapingBorder {
+	margin: 10px;
+	border-radius: 5px;
+	border-style: solid;
+	border-color: #ccc;
+}
+
+/*Current courses*/
+
+.currentCoursesContainer {
+	flex: 60%;
+	padding: 10px;
+}
+
+.currentCoursesTable {
+	margin: 10px;
+}
+
+/*Course input*/
+
+.addNewCourseContainer {
+	flex: 0 1 400px;
+	padding: 10px;
+}
+
+.courseInput, .largeCourseInput, .smallCourseInput, .courseInputLabels {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.courseInputLabels {
+	font-weight: bold;
+}
+
+.largeCourseInput {
+	width: calc(100% - 10px);
+}
+
+.smallCourseInput {
+	width: 50%;
+}
+  
+.columnCity {
+	flex: 50%;
+}
+
+.columnState {
+	flex: 15%;
+}
+
+.columnZip {
+	flex: 35%;
+}
+
+.rightColumn {
+	margin-right: 0px;
+	width: calc(100% - 10px)
+}
+
+.leftColumn {
+	width: calc(100% - 10px)
+}
