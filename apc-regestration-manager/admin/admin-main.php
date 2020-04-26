@@ -20,6 +20,7 @@ function apcrm_admin_page_init() {
 	$first_thing->apcrm_set_zip("12345");
 	$first_thing->apcrm_set_start_date("12-12-2012 12:12:12");
 	$first_thing->apcrm_set_end_date("12-14-2012 14:14:14");
+	$first_thing->apcrm_set_eventbrite_url("http://yahoo.com");
 
 	$second_thing = new apcrm_course();
 	$second_thing->apcrm_set_course_type("Street crimes");
@@ -31,6 +32,7 @@ function apcrm_admin_page_init() {
 	$second_thing->apcrm_set_zip("12555");
 	$second_thing->apcrm_set_start_date("12-12-2020 12:12:12");
 	$second_thing->apcrm_set_end_date("12-14-2020 14:14:14");
+	$second_thing->apcrm_set_eventbrite_url("http://google.com");
 
 	$some_things = array($first_thing, $second_thing);
 

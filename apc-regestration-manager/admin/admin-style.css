@@ -18,8 +18,28 @@
 	padding: 10px;
 }
 
-.currentCoursesTable {
+#currentCoursesTable {
 	margin: 10px;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+#currentCoursesTable tr, table#currentCoursesTable th {
+	border: 1px solid black;
+	padding: 5px;
+}
+
+#currentCoursesTable thead th {
+	background-color: #0B3954;
+	color: rgb(250, 250, 250);
+}
+
+#currentCoursesTable tbody th {
+	font-weight: normal;
+}
+
+#currentCoursesTable tbody tr:hover {
+	background-color: rgb(250, 250, 250);
 }
 
 /*Course input*/
@@ -45,7 +65,7 @@
 .smallCourseInput {
 	width: 50%;
 }
-  
+
 .columnCity {
 	flex: 50%;
 }
