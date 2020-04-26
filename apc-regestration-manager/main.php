@@ -17,20 +17,20 @@ add_action('admin_menu', 'apcrm_plugin_setup_menu');
  * @return void
  */
 function apcrm_plugin_init() {
-	
+
 }
 
 /**
- * Sets up the panal on the admin page
+ * Sets up the panel on the admin page
  *
  * @return void
  */
 function apcrm_plugin_setup_menu() {
 	add_management_page(
-		'APC Registration Manager Page', 
-		'APC Registration', 
-		'manage_options', 
-		'apcrm-plugin', 
+		'APC Registration Manager Page',
+		'APC Registration',
+		'manage_options',
+		'apcrm-plugin',
 		'apcrm_admin_page_init'
 	);
 }

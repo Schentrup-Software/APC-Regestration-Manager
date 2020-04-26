@@ -8,11 +8,13 @@ function apcrm_admin_render_table($array_of_courses) {
 			<thead>
 				<tr>
 					<th>Course Type</th>
+					<th>Access Type</th>
 					<th>Agency</th>
 					<th>Address</th>
 					<th>Start Date</th>
 					<th>End Date</th>
-					<th>Eventbrite</th>
+					<th>Cost</th>
+					<th>Registration</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -20,6 +22,7 @@ function apcrm_admin_render_table($array_of_courses) {
 				foreach	($array_of_courses as $course) {
 					echo '<tr>';
 					echo '<th>' . $course->apcrm_get_course_type() . '</th>';
+					echo '<th>' . $course->apcrm_get_access_type() . '</th>';
 					echo '<th>' . $course->apcrm_get_agency() . '</th>';
 					echo '<th>' .
 						$course->apcrm_get_address_line_one() . ' ' .
@@ -29,7 +32,8 @@ function apcrm_admin_render_table($array_of_courses) {
 						$course->apcrm_get_zip() . '</th>';
 					echo '<th>' . $course->apcrm_get_start_date() . '</th>';
 					echo '<th>' . $course->apcrm_get_end_date() . '</th>';
-					echo '<th><a href="' . $course->apcrm_get_eventbrite_url() . '">Go to</a></th>';
+					echo '<th>$' . $course->apcrm_get_cost() . '</th>';
+					echo '<th><a href="' . $course->apcrm_get_registration_url() . '">Go to</a></th>';
 					echo '</tr>';
 				}
 				?>
