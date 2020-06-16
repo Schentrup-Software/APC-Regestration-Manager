@@ -3,23 +3,7 @@
 require_once 'admin-form.php';
 require_once 'admin-table.php';
 require_once __DIR__ . '/../DTOs/course.php';
-require_once __DIR__ . '/../DTOs/course-db.php';
 require_once __DIR__ . '/../repository/repository-courses.php';
-
-define('APCRM_COURSES_FORM_ID', 'apcrm_courses');
-define('APCRM_QUERY_COURSE_ID', 'apcrm_course_id');
-define("APCRM_COURSES_TYPES", [
-    "Supervisor Report Review",
- 	"Advanced Interview and Interrogation",
- 	"Homicide Investigations Seminar",
- 	"Child Sexual Exploitation Investigations",
- 	"Advanced Field Training Officer Course",
- 	"Street Crimes & Proactive Patrol"
-]);
-define("APCRM_ACCESS_TYPES", [
-    "Online",
- 	"In person"
-]);
 
 /**
  * Renders the admin page

@@ -1,7 +1,7 @@
 <?php
 
 require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-require_once __DIR__ . '/../DTOs/course-db.php';
+require_once __DIR__ . '/../DTOs/course.php';
 
 define('COURSE_TABLE_NAME', "{$wpdb->base_prefix}apcrm_courses");
 

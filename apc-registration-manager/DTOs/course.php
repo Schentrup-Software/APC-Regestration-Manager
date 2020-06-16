@@ -33,6 +33,17 @@ class apcrm_course extends apcrm_base {
 		$this->course_type = $this->apcrm_clean_input($course_type);
 	}
 
+	function apcrm_get_course_type_url() {
+		$index = 0;
+		foreach	(APCRM_COURSES_TYPES as $type) {
+			if($type == $this->course_type)
+				return APCRM_COURSES_TYPES_URLS[$index];
+			else
+				$index++;
+		}
+		throw new Exception('Invalid course type: ' . $this->course_type);
+	}
+
 	function apcrm_get_access_type() {
 		return $this->access_type;
 	}
