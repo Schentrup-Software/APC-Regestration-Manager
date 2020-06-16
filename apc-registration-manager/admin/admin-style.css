@@ -24,7 +24,7 @@
 	text-align: left;
 }
 
-#currentCoursesTable tr, table#currentCoursesTable th {
+#currentCoursesTable tr, table#currentCoursesTable th, table#currentCoursesTable td {
 	border: 1px solid black;
 	padding: 5px;
 }
@@ -34,7 +34,7 @@
 	color: rgb(250, 250, 250);
 }
 
-#currentCoursesTable tbody th {
+#currentCoursesTable td {
 	font-weight: normal;
 }
 
@@ -85,4 +85,8 @@
 
 .leftColumn {
 	width: calc(100% - 10px)
+}
+
+.columnButtons {
+	flex: 50%
 }

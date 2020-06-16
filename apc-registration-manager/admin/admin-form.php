@@ -7,9 +7,20 @@
  */
 function apcrm_admin_render_form($form_id, $course) {
 	?>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(".reset").click(function() {
+					$('form').find("input[type=radio]").prop("checked", false);
+					$('form').find("input[type=text]").val("");
+					$('form').find("input[type=datetime-local]").val("");
+					$('form').find("input[type=number]").val("");
+				});
+			});
+		</script>
 		<div class="addNewCourseContainer wrapingBorder">
 			<h2>Add new course</h2>
-			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+			<form method="post" action=" ">
 				<label class="courseInputLabels">Course type:</label>
 				<div class="courseInput">
 					<?php
@@ -143,7 +154,28 @@ function apcrm_admin_render_form($form_id, $course) {
 					required
 				>
 				<br>
-				<input type="submit" class="courseInput" name="<?php echo $form_id?>" value="Submit">
+				<input
+					type="text"
+					id="registrationUrlInput"
+					name="registration_url"
+					value="<?php echo $course->apcrm_get_registration_url()?>"
+					hidden
+				>
+				<input
+					type="number"
+					id="idInput"
+					name="id"
+					value="<?php echo $course->apcrm_get_id()?>"
+					hidden
+				>
+				<div class="row">
+					<div class="columnButtons">
+						<input type="submit" class="courseInput leftColumn" name="<?php echo $form_id?>" value="Submit">
+					</div>
+					<div class="columnButtons">
+						<input type="button" class="courseInput rightColumn reset" value="Clear">
+					</div>
+				</div>
 			</form>
 		</div>
 	<?php

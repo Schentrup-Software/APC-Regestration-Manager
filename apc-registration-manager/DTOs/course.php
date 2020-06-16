@@ -3,6 +3,7 @@
 require_once 'base.php';
 
 class apcrm_course extends apcrm_base {
+	private $id;
 	private $course_type;
 	private $access_type;
 	private $agency;
@@ -15,6 +16,14 @@ class apcrm_course extends apcrm_base {
 	private $end_date;
 	private $cost;
 	private $registration_url;
+
+	function apcrm_get_id() {
+		return $this->id;
+	}
+
+	function apcrm_set_id($id) {
+		$this->id = $id;
+	}
 
 	function apcrm_get_course_type() {
 		return $this->course_type;

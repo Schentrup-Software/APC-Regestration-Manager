@@ -7,9 +7,11 @@
  **/
 
 require_once 'admin/admin-main.php';
+require_once 'repository/repository-courses.php';
 
 add_action( 'admin_init', 'apcrm_plugin_init' );
 add_action('admin_menu', 'apcrm_plugin_setup_menu');
+add_shortcode( 'apcrm_registration_page', 'apcrm_registration_page_init' );
 
 /**
  * Run on plugin activation
@@ -17,7 +19,7 @@ add_action('admin_menu', 'apcrm_plugin_setup_menu');
  * @return void
  */
 function apcrm_plugin_init() {
-
+	apcrm_init_regestrations_table();
 }
 
 /**

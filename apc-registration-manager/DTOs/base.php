@@ -6,7 +6,7 @@ class apcrm_base {
 		$props = $class->getProperties();
 		foreach($props as $p) {
 			 if (isset($array[$p->getName()]))
-			 	$this->{'apcrm_set_' . $p->getName()}($this->apcrm_clean_input($array[$p->getName()]));
+			 	$this->{'apcrm_set_' . $p->getName()}($array[$p->getName()]);
 		}
 	}
 
